@@ -1,0 +1,29 @@
+#spring properties
+spring:
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=testdb
+    username: sa
+    password: 1qaz2WSX
+    type: org.apache.commons.dbcp2.BasicDataSource
+    dbcp2:
+      initial-size: 15
+      min-idle: 10
+      max-total: 100
+      test-on-borrow: true
+      validation-query: select 1
+      max-wait-millis: 5000
+      max-conn-lifetime-millis: 3600000
+#liquibase
+liquibase:
+  change-log: classpath:/db/changelog/db.changelog-master.yml
+#logger
+logging:
+#  file: ./logs
+  level:
+    ROOT: INFO
+    com.syntrontech.auth: TRACE
+      

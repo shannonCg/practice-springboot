@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include: 
+      file: db-test-initial.yml
+      relativeToChangelogFile: true    
