@@ -36,4 +36,11 @@ public class CreateStudentVO {
 		this.status = status;
 	}
 	
+	public String toString(){
+		return "CreateStudentVO"+"{"
+				+"studentId="+studentId+","
+				+"studentName="+studentName+","
+				+"status="+status.name()
+				+"}";
+	}
 }

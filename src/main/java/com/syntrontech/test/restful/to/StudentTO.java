@@ -36,4 +36,11 @@ public class StudentTO {
 		this.status = Status.valueOf(status.name());
 	}
 	
+	public String toString(){
+		return "StudentTO"+"{"
+				+"studentId="+studentId+","
+				+"studentName="+studentName+","
+				+"status="+status.name()
+				+"}";
+	}
 }

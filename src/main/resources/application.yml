@@ -25,5 +25,5 @@ logging:
 #  file: ./logs
   level:
     ROOT: INFO
-    com.syntrontech.auth: TRACE
+    com.syntrontech.test: TRACE
       

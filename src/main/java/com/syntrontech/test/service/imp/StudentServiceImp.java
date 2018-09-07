@@ -6,9 +6,12 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.syntrontech.test.aop.StudentRepositoryAOP;
 import com.syntrontech.test.exception.client.NotFoundException;
 import com.syntrontech.test.exception.client.ObjectHasExistedException;
 import com.syntrontech.test.exception.client.ObjectNotExistedException;
@@ -23,6 +26,8 @@ import com.syntrontech.test.service.StudentService;
 @Service
 public class StudentServiceImp implements StudentService {
 
+	private static final Logger logger = LoggerFactory.getLogger(StudentServiceImp.class);
+	
 	@Autowired
 	private StudentRepository studentRepository;
 	
@@ -43,6 +48,7 @@ public class StudentServiceImp implements StudentService {
 		student.setUpdateTime(createTime);
 		
 		Student newStudent = studentRepository.save(student);
+		logger.debug("update sutdent successfully");
 		return convertFromStudent(newStudent);
 	}
 
@@ -56,6 +62,7 @@ public class StudentServiceImp implements StudentService {
 		student.setUpdateTime(updateTime);
 		
 		Student newStudent = studentRepository.save(student);
+		logger.debug("update sutdent successfully");
 		return convertFromStudent(newStudent);
 	}
 
@@ -75,6 +82,7 @@ public class StudentServiceImp implements StudentService {
 		student.setUpdateTime(updateTime);
 		
 		studentRepository.save(student);
+		logger.debug("update sutdent successfully");
 	}
 
 	@Override

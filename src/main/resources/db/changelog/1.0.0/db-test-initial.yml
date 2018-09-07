@@ -23,17 +23,17 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: id
-                  type: varchar(255)
+                  type: nvarchar(255)
                   constraints:
                     nullable: false
               - column:
                   name: name
-                  type: varchar(5)
+                  type: nvarchar(255)
                   constraints:
                     nullable: false                  
               - column:
                   name: status
-                  type: varchar(255)
+                  type: nvarchar(255)
                   constraints:
                     nullable: false
               - column:
@@ -43,7 +43,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: createby
-                  type: varchar(255)
+                  type: nvarchar(255)
                   constraints:
                     nullable: false
               - column:
@@ -53,6 +53,6 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: updateby
-                  type: varchar(255)
+                  type: nvarchar(255)
                   constraints:
                     nullable: false

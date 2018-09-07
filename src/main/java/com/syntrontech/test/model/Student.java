@@ -109,4 +109,16 @@ public class Student {
 		this.status = status;
 	}
 	
+	public String toString(){
+		return "Student"+"{"
+				+"sequence="+sequence+","
+				+"id="+id+","
+				+"name="+name+","
+				+"createTime="+createTime+","
+				+"createBy="+createBy+","
+				+"updateTime="+updateTime+","
+				+"updateBy="+updateBy+","
+				+"status="+status.name()
+				+"}";
+	}
 }

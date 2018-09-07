@@ -26,6 +26,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- use aop start -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<!-- use aop end -->
+
 		<!-- use jersey in spring boot start -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
