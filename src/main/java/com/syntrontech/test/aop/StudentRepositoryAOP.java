@@ -53,18 +53,15 @@ public class StudentRepositoryAOP {
 	@AfterReturning(
 			pointcut = "execution(* com.syntrontech.test.repository.StudentRepository.save(..))",
 			returning = "result")
-	public void afterReturning(JoinPoint joinPoint, Object result){
+	public void afterReturning(JoinPoint joinPoint, Student result){
 		Object arg = joinPoint.getArgs()[0];
 		if(arg instanceof Student){
 			Student student = (Student) arg;
 			logger.debug("3.need to save model(arg):"+student);
 		}
 		logger.debug("3.after calling save method");
-		if(result instanceof Student){
-			Student student = (Student) result;
-			logger.debug("3.after saving model(return value):"+student);
-			student.setName("after aop agin two");
-		}
+		logger.debug("3.after saving model(return value):"+result);
+		result.setName("after aop agin two");
 	}
 	
 	@AfterThrowing(

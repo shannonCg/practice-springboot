@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.syntrontech.test.aop.StudentRepositoryAOP;
 import com.syntrontech.test.exception.client.NotFoundException;
 import com.syntrontech.test.exception.client.ObjectHasExistedException;
 import com.syntrontech.test.exception.client.ObjectNotExistedException;
