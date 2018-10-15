@@ -17,10 +17,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAutoConfiguration
 @PropertySource(value="${spring.config.location:classpath:application.yml}")
 @EnableJpaRepositories(basePackages = {
-		"com.syntrontech.test.repository"
+		"com.syntrontech.test.repository",
+		"com.syntrontech.test.criteria"
 })
 @EntityScan(basePackages = {
-		"com.syntrontech.test.model"
+		"com.syntrontech.test.model",
+		"com.syntrontech.test.criteria"
 })
 @EnableTransactionManagement
 public class Application {
