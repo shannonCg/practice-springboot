@@ -26,4 +26,8 @@ logging:
   level:
     ROOT: INFO
     com.syntrontech.test: TRACE
+#properties
+my:
+# make 'servers' disappear will cause Spring @Value not work
+  servers: dev.example.com, nother.example.com
       
